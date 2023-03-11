@@ -31,40 +31,39 @@ class _LoginPageState extends State<LoginPage> {
                   vertical: MediaQuery.of(context).size.height / 18,
                 ),
                 child: SingleChildScrollView(
-                  child: SafeArea(
-                      left: true,
-                      top: true,
-                      right: true,
-                      bottom: true,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Image.asset("assets/images/imageWelc.png",
-                                  fit: BoxFit.cover),
-                              const SizedBox(
-                                height: 10.0,
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 1, horizontal: 34),
-                                child: Text("Log In",
-                                    style: TextStyle(
-                                      fontSize: 28,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                    textAlign: TextAlign.start),
-                              ),
-                              const SizedBox(
-                                height: 20.0,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    vertical: 1, horizontal: 32.0),
-                                child: Column(
-                                  children: [
+                    child: SafeArea(
+                        left: true,
+                        top: true,
+                        right: true,
+                        bottom: true,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Image.asset("assets/images/imageWelc.png",
+                                    fit: BoxFit.cover),
+                                const SizedBox(
+                                  height: 10.0,
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: 1, horizontal: 34),
+                                  child: Text("Log In",
+                                      style: TextStyle(
+                                        fontSize: 28,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      textAlign: TextAlign.start),
+                                ),
+                                const SizedBox(
+                                  height: 20.0,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 1, horizontal: 32.0),
+                                  child: Column(children: [
                                     Padding(
                                       padding: const EdgeInsets.all(8),
                                       child: TextFormField(
@@ -132,56 +131,21 @@ class _LoginPageState extends State<LoginPage> {
                                                 ]),
                                           )),
                                     ),
-                                    Padding(
-                                        padding: const EdgeInsets.all(10.0),
-                                        child: ElevatedButton(
-                                          onPressed: () {
-                                            // ignore: unused_label
-
-                                            // Navigator.push(
-                                            //     context,
-                                            //     MaterialPageRoute(
-                                            //         builder: (_) =>
-                                            //             const MyHomePage(
-                                            //               title: '',
-                                            //             )));
-                                          },
-                                          child: Container(
-                                            height: 50,
-                                            alignment: Alignment.center,
-                                            decoration: const BoxDecoration(
-                                                color: Colors.black,
-                                                shape: BoxShape.rectangle),
-
-                                            child: const Text(
-                                              'Log In',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w100),
-                                            ),
-                                            //suffixIcon:IconButton(  icon:Icon( Icons.arrow_forward_outlined ),)
-                                          ),
-                                        )),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
-                                  Text("Don't have an user account?"),
-                                  Text(
-                                    "SignUp",
-                                    style: TextStyle(color: Colors.blue),
-                                  ),
-                                ],
-                              )
-                            ]),
-                      )),
-                  //)
-                ))));
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Text("Don't have an user account?"),
+                                        Text(
+                                          "SignUp",
+                                          style: TextStyle(color: Colors.blue),
+                                        ),
+                                      ],
+                                    )
+                                  ]),
+                                )
+                              ]),
+                          //)
+                        ))))));
   }
 }
