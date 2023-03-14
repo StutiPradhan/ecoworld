@@ -203,18 +203,21 @@ class _signupState extends State<signup> {
                           height: 25,
                         ),
                         Center(
-                            child: RichText(
-                          text: new TextSpan(children: [
-                            new TextSpan(
-                                text: 'Already have an account?',
-                                style:
-                                    TextStyle(color: Ecocolors.selectionGrey2)),
-                            new TextSpan(
-                                text: 'Login',
-                                style:
-                                    TextStyle(color: Ecocolors.selectionBlue))
-                          ]),
-                        ))
+                          child: RichText(
+                            text: new TextSpan(
+                              children: [
+                                new TextSpan(
+                                    text: 'Already have an account?',
+                                    style: TextStyle(
+                                        color: Ecocolors.selectionGrey2)),
+                                new TextSpan(
+                                    text: 'Login',
+                                    style: TextStyle(
+                                        color: Ecocolors.selectionBlue))
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   )
