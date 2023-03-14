@@ -1,16 +1,20 @@
 import 'package:ecoworld/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class signup extends StatefulWidget {
-  const signup({super.key});
+//import 'package:flutter/src/widgets/framework.dart';
+//import 'package:flutter/src/widgets/placeholder.dart';
+
+// import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/placeholder.dart';
+
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<signup> createState() => _signupState();
+  State<SignUp> createState() => _signupState();
 }
 
-class _signupState extends State<signup> {
+class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
 
   @override
@@ -21,6 +25,7 @@ class _signupState extends State<signup> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -33,14 +38,14 @@ class _signupState extends State<signup> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset('assets/images/ecoworld.png'),
-              SizedBox(
+              const SizedBox(
                 height: 17,
               ),
               const Text(
                 'Sign Up',
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16,
               ),
               Column(
@@ -54,9 +59,9 @@ class _signupState extends State<signup> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 4),
+                    child: const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Name',
@@ -66,7 +71,7 @@ class _signupState extends State<signup> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
@@ -78,9 +83,9 @@ class _signupState extends State<signup> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 4),
+                    child: const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Phone Number',
@@ -90,7 +95,7 @@ class _signupState extends State<signup> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
@@ -102,19 +107,24 @@ class _signupState extends State<signup> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 4),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: 'Email',
-                          border: InputBorder.none,
-                          hintStyle: TextStyle(color: Ecocolors.selectionGrey1),
+                    child: const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                      child: Padding(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Email',
+                            border: InputBorder.none,
+                            hintStyle:
+                                TextStyle(color: Ecocolors.selectionGrey1),
+                          ),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
@@ -142,12 +152,16 @@ class _signupState extends State<signup> {
                                   ? Icons.visibility
                                   : Icons.visibility_off)),
                           border: InputBorder.none,
-                          hintStyle: TextStyle(color: Ecocolors.selectionGrey1),
+
+                          hintStyle:
+                              const TextStyle(color: Ecocolors.selectionGrey1),
+
+                          //  hintStyle: TextStyle(color: Ecocolors.selectionGrey1),
                         ),
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 16,
                   ),
                   Container(
@@ -159,9 +173,9 @@ class _signupState extends State<signup> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 24, vertical: 4),
+                    child: const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
                         decoration: InputDecoration(
                           hintText: 'Address',
@@ -171,7 +185,7 @@ class _signupState extends State<signup> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   Padding(
@@ -192,14 +206,14 @@ class _signupState extends State<signup> {
                                     MediaQuery.of(context).size.height / 53),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Text('Create Account'),
                                 Icon(Icons.arrow_forward)
                               ],
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 25,
                         ),
                         Center(
