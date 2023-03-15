@@ -1,6 +1,10 @@
 //import 'package:ecoworld/constants/colors.dart';
 import "package:ecoworld/constants/colors.dart";
+import "package:ecoworld/pages/community.dart";
+import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
+
+import "../utilities/error_dialog_box.dart";
 //import 'package:ecoworld/pages/home.dart';
 
 //import "../main.dart";
@@ -16,6 +20,22 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String? name = "";
   bool _isObscure = true;
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(8),
                                       child: TextFormField(
+                                        controller: _email,
                                         decoration: const InputDecoration(
                                           labelText: "Email",
                                           border: OutlineInputBorder(),
@@ -76,6 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(8),
                                       child: TextField(
+                                        controller: _password,
                                         obscureText: _isObscure,
                                         decoration: InputDecoration(
                                             border: const OutlineInputBorder(),
@@ -107,7 +129,47 @@ class _LoginPageState extends State<LoginPage> {
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
                                       child: ElevatedButton(
-                                          onPressed: () {},
+                                          onPressed: () async {
+                                            final email = _email.text;
+                                            final password = _password.text;
+                                            try {
+                                              final userCredential =
+                                                  await FirebaseAuth.instance
+                                                      .signInWithEmailAndPassword(
+                                                          email: email,
+                                                          password: password);
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      CommunityPage(),
+                                                ),
+                                              );
+                                            } on FirebaseAuthException catch (e) {
+                                              if (e.code == 'user-not-found') {
+                                                await showErrorDialogue(
+                                                  context,
+                                                  'User not found',
+                                                );
+                                              } else if (e.code ==
+                                                  'wrong-password') {
+                                                await showErrorDialogue(
+                                                  context,
+                                                  'Wrong credentials',
+                                                );
+                                              } else {
+                                                await showErrorDialogue(
+                                                  context,
+                                                  'Error: ${e.code}',
+                                                );
+                                              }
+                                            } catch (e) {
+                                              await showErrorDialogue(
+                                                context,
+                                                e.toString(),
+                                              );
+                                            }
+                                          },
                                           style: ElevatedButton.styleFrom(
                                               backgroundColor:
                                                   Ecocolors.selectionBlack),
