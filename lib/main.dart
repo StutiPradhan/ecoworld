@@ -1,5 +1,9 @@
 import 'package:ecoworld/pages/login.dart';
+
 import 'package:ecoworld/signup.dart';
+
+import 'package:ecoworld/pages/profile.dart';
+
 //import 'package:ecoworld/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +37,11 @@ class MyApp extends StatelessWidget {
 
           ),
 
+
       home: const SignUp(),
+
+      home: const ProfilePage(),
+
 
       //home: const signup(),
     );
