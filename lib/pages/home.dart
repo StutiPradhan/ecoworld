@@ -142,7 +142,8 @@ class MyHomePage extends StatelessWidget {
                       ),
                       Text(
                         'Ghatikia',
-                        style: TextStyle(fontSize: 12,color: Colors.grey.shade600),
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
                       )
                     ],
                   ),
@@ -185,7 +186,8 @@ class MyHomePage extends StatelessWidget {
                       ),
                       Text(
                         'Khandagiri',
-                        style: TextStyle(fontSize: 12,color: Colors.grey.shade600),
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
                       )
                     ],
                   ),
@@ -228,7 +230,8 @@ class MyHomePage extends StatelessWidget {
                       ),
                       Text(
                         'Patia',
-                        style: TextStyle(fontSize: 12,color: Colors.grey.shade600),
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
                       )
                     ],
                   ),
@@ -248,11 +251,9 @@ class MyHomePage extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
           ),
-
           SizedBox(
             height: 16,
           ),
-
           Container(
             child: Column(children: [
               Container(

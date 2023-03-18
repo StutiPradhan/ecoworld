@@ -1,10 +1,12 @@
+import 'package:ecoworld/pages/profile.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/main.dart';
 import 'package:ecoworld/pages/Profile_page.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class NavPage extends StatefulWidget {
   const NavPage({super.key});
@@ -16,7 +18,7 @@ class NavPage extends StatefulWidget {
 class _NavPageState extends State<NavPage> {
   int index = 0;
 
-  List _index = [MyHomePage(), CommunityPage(), Profilepage()];
+  List _index = [MyHomePage(), CommunityPage(), ProfilePage()];
 
   void updatePage(int _index) {
     setState(() {
