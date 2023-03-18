@@ -1,10 +1,19 @@
 import 'package:ecoworld/pages/login.dart';
 
+
+
+import 'package:ecoworld/signup.dart';
+
+import 'package:ecoworld/pages/profile.dart';
+
+//import 'package:ecoworld/signup.dart';
+
 import 'package:flutter/material.dart';
 
 import 'Nav.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized;
   runApp(const MyApp());
 }
 
@@ -16,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'EcoWorld',
       theme: ThemeData(
           // This is the theme of your application.
           //
@@ -31,7 +40,13 @@ class MyApp extends StatelessWidget {
 
           ),
 
+
       home: NavPage(),
+
+      //home: const SignUp(),
+
+      home: const LoginPage(),
+
 
       //home: const signup(),
     );
