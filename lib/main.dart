@@ -1,13 +1,16 @@
 import 'package:ecoworld/pages/login.dart';
 
+
+
 import 'package:ecoworld/signup.dart';
 
 import 'package:ecoworld/pages/profile.dart';
 
 //import 'package:ecoworld/signup.dart';
+
 import 'package:flutter/material.dart';
 
-import 'pages/community.dart';
+import 'Nav.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized;
@@ -37,27 +40,15 @@ class MyApp extends StatelessWidget {
 
           ),
 
+
+      home: NavPage(),
+
       //home: const SignUp(),
 
       home: const LoginPage(),
 
+
       //home: const signup(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
