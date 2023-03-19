@@ -21,24 +21,26 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           child: Column(children: [
             Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {
-                      setState(() {});
-                    },
-                    iconSize: 40,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    setState(() {});
+                  },
+                  iconSize: 40,
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 70.0),
+                  child: Text(
+                    "My Profile",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 70.0),
-                    child: Text("My Profile",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold)),
-                  ),
-                ]),
+                ),
+              ],
+            ),
             Padding(
               padding: const EdgeInsets.only(top: 32),
               child: Row(
