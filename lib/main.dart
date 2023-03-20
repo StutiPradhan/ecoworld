@@ -1,6 +1,7 @@
+import 'package:ecoworld/pages/Editprofile.dart';
+import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/pages/home.dart';
 import 'package:ecoworld/pages/login.dart';
-
-
 
 import 'package:ecoworld/signup.dart';
 
@@ -19,10 +20,19 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  
+  get homeRoute => 'homepage';
+  
+  get communityRoute => 'communitypage';
+  
+  get ProfileRoute => 'profilepage';
+  
+ 
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EcoWorld',
@@ -40,15 +50,21 @@ class MyApp extends StatelessWidget {
 
           ),
 
+          // initialRoute:  LoginPage(),
 
-      home: NavPage(),
+          // routes: {
+          //   homeRoute : (context) => MyHomePage(),
+          //   communityRoute : (context) => CommunityPage(),
+          //   ProfileRoute : (context) => ProfilePage()
+          // },
+
+      // home: NavPage(),
 
       //home: const SignUp(),
 
-      home: const LoginPage(),
-
-
-      //home: const signup(),
+    
+home: MyHomePage(),
+      //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
     );
   }
 }
