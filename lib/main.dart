@@ -1,4 +1,6 @@
 import 'package:ecoworld/pages/InfoPage.dart';
+import 'package:ecoworld/pages/Sell_Scrap.dart';
+import 'package:ecoworld/pages/editprofile.dart';
 import 'package:ecoworld/pages/login.dart';
 
 import 'package:ecoworld/signup.dart';
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
 
           ),
 
-      home: const InformationPage(),
+      home: const EditProfile(),
 
       //home: const SignUp(),
 
