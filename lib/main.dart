@@ -1,13 +1,16 @@
+
 import 'package:ecoworld/pages/Editprofile.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
+import 'package:ecoworld/pages/InfoPage.dart';
+import 'package:ecoworld/pages/Sell_Scrap.dart';
+import 'package:ecoworld/pages/editprofile.dart';
+
 import 'package:ecoworld/pages/login.dart';
 
 import 'package:ecoworld/signup.dart';
 
 import 'package:ecoworld/pages/profile.dart';
-
-//import 'package:ecoworld/signup.dart';
 
 import 'package:flutter/material.dart';
 
@@ -50,6 +53,7 @@ class MyApp extends StatelessWidget {
 
           ),
 
+
           // initialRoute:  LoginPage(),
 
           // routes: {
@@ -61,6 +65,13 @@ class MyApp extends StatelessWidget {
       // home: NavPage(),
 
       //home: const SignUp(),
+
+      home: const EditProfile(),
+
+      //home: const SignUp(),
+
+      //home: const LoginPage(),
+
 
     
 home: MyHomePage(),
