@@ -52,7 +52,7 @@ class MyHomePage extends StatelessWidget {
             height: 180,
             width: 350,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.grey)),
             child: Column(
               children: [
@@ -75,11 +75,12 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 16,
+                  height: 4,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,6 +99,10 @@ class MyHomePage extends StatelessWidget {
                               style: TextStyle(color: Colors.grey.shade600)),
                         ],
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 12.0, bottom: 8),
+                        child: Image.asset('assets/images/garbage.png'),
+                      )
                     ],
                   ),
                 ),
@@ -115,31 +120,47 @@ class MyHomePage extends StatelessWidget {
             height: 16,
           ),
           Container(
-            height: 72,
+            height: 100,
             width: 350,
             decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.shade600),
+                border: Border.all(color: Ecocolors.selectionGreen),
                 borderRadius: BorderRadius.circular(12)),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.account_box_rounded,
-                  color: Ecocolors.selectionGreen,
-                  // color: Colors.lightGreen,
-                  size: 36,
-                ),
                 Padding(
-                  padding: const EdgeInsets.only(right: 60.0),
+                  padding: const EdgeInsets.only(left: 12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Surya Pratap Singh',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16),
+                        'Wait !!',
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text('Dont throw away your scrap'),
+                      Text('Instead sell them here')
+                    ],
+                  ),
+                ),
+                
+                Container(child: Image.asset('assets/images/Sell1.png')),
+                Container(
+                    height: 100,
+                    width: 30,
+                    decoration: BoxDecoration(
+                       color: Ecocolors.selectionGreen,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(12),
+                            bottomRight: Radius.circular(12))),
+                   
+                    child: Icon(Icons.arrow_forward_ios,size: 16,))
+
                       Text(
                         'Ghatikia',
                         style: TextStyle(
@@ -241,6 +262,7 @@ class MyHomePage extends StatelessWidget {
                   color: Colors.blue,
                   size: 24,
                 )
+
               ],
             ),
           ),
@@ -272,13 +294,14 @@ class MyHomePage extends StatelessWidget {
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(12),
                                 topRight: Radius.circular(12)),
-                            color: Colors.grey.shade300),
+                            color: Colors.grey.shade200),
                       ),
                       Container(
                         height: 50,
                         decoration: BoxDecoration(color: Colors.white),
                         child: Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.only(
+                              left: 16.0, right: 16, top: 12),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -335,7 +358,8 @@ class MyHomePage extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(color: Colors.white),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.only(
+                            left: 16.0, right: 16, top: 12),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -375,7 +399,7 @@ class MyHomePage extends StatelessWidget {
                 height: 180,
                 width: 350,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey.shade300),
+                    border: Border.all(color: Colors.grey.shade200),
                     borderRadius: BorderRadius.circular(12)),
                 //color: Colors.amber,
 
@@ -393,7 +417,8 @@ class MyHomePage extends StatelessWidget {
                       height: 50,
                       decoration: BoxDecoration(color: Colors.white),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.only(
+                            left: 16.0, right: 16, top: 12),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

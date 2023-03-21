@@ -268,22 +268,30 @@ class _signupState extends State<SignUp> {
                         const SizedBox(
                           height: 25,
                         ),
-                        Center(
-                          child: RichText(
-                            text: new TextSpan(
-                              children: [
-                                new TextSpan(
-                                    text: 'Already have an account?',
-                                    style: TextStyle(
-                                        color: Ecocolors.selectionGrey2)),
-                                new TextSpan(
-                                    text: 'Login',
-                                    style: TextStyle(
-                                        color: Ecocolors.selectionBlue))
-                              ],
-                            ),
-                          ),
-                        ),
+                                  Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Already have an account?"),
+                            TextButton(
+                                onPressed: () {
+                                  setState(() {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => LoginPage()));
+                                  });
+                                },
+                                child: Text(
+                                  'Login',
+                                  style: TextStyle(color: Colors.blue),
+                                ))
+                            // TextButton(
+
+                            //   "SignUp",
+                            //   style: TextStyle(color: Colors.blue),
+                            // ),
+                          ],
+                        )
                       ],
                     ),
                   )

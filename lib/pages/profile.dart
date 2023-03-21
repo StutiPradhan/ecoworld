@@ -1,9 +1,23 @@
 import 'package:ecoworld/constants/colors.dart';
+import 'package:ecoworld/pages/Editprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'login.dart';
+
 class ProfilePage extends StatefulWidget {
-  const ProfilePage({super.key});
+  // String Name;
+  // int Number;
+  // String Address;
+  // String City;
+
+ const ProfilePage( 
+      {super.key,
+      // required this.Name,
+      // required this.Number,
+      // required this.Address,
+      // required this.City
+      });
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -16,23 +30,16 @@ class _ProfilePageState extends State<ProfilePage> {
       child: Material(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width / 15,
-            vertical: MediaQuery.of(context).size.height / 18,
+            horizontal: MediaQuery.of(context).size.width / 25,
+            vertical: MediaQuery.of(context).size.height / 20,
           ),
           child: Column(children: [
             Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                //  crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {
-                      setState(() {});
-                    },
-                    iconSize: 40,
-                  ),
                   const Padding(
-                    padding: EdgeInsets.only(left: 70.0),
+                    padding: EdgeInsets.only(top: 20.0),
                     child: Text("My Profile",
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -40,15 +47,17 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ]),
             Padding(
-              padding: const EdgeInsets.only(top: 32),
+              padding: const EdgeInsets.only(top: 24, left: 6),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: 120,
                     width: 120,
                     decoration: BoxDecoration(
-                        border: Border.all(width: 2), color: Colors.black),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(width: 2),
+                        color: Colors.black),
                     child: Image.asset("assets/images/ProfileImage.png"),
                   ),
                   Expanded(
@@ -79,10 +88,10 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 23.0),
+              padding: const EdgeInsets.only(top: 23.0, right: 20),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const SizedBox(
                     height: 24,
@@ -98,44 +107,44 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Expanded(
                             child: Column(children: [
                               ElevatedButton(
-                                onPressed: () {},
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.white,
-                                  side: const BorderSide(
-                                      width: 2.0, color: Colors.black),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal:
-                                          MediaQuery.of(context).size.width /
-                                              17,
-                                      vertical:
-                                          MediaQuery.of(context).size.height /
-                                              50),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Icon(
-                                        CupertinoIcons.arrow_left_circle_fill,
-                                        color: Colors.black,
-                                      ),
-                                      Text('Log Out',
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.normal)),
-                                    ],
+                                  style: ElevatedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(12)),
+                                    backgroundColor: Colors.white,
+                                    side: const BorderSide(
+                                        width: 2.0, color: Colors.black),
                                   ),
-                                ),
-                              ),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal:
+                                            MediaQuery.of(context).size.width /
+                                                17,
+                                        vertical:
+                                            MediaQuery.of(context).size.height /
+                                                50),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: const [
+                                        Icon(
+                                          CupertinoIcons.arrow_left_circle_fill,
+                                          color: Colors.black,
+                                        ),
+                                        Text('Log Out',
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontWeight: FontWeight.normal)),
+                                      ],
+                                    ),
+                                  ),
+                                  onPressed: () => Navigator.pop(context)),
                             ]),
                           ),
                         )
                       ]),
-                  const SizedBox(
-                    height: 24,
-                  ),
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
@@ -145,9 +154,17 @@ class _ProfilePageState extends State<ProfilePage> {
                           child: Expanded(
                             child: Column(children: [
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => EditProfilePage(
+                                           
+                                            ))),
                                 style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12)),
                                   backgroundColor: Colors.black,
+
                                   //side: const BorderSide(
                                   //  width: 2.0, color: Colors.black),
                                 ),
@@ -182,7 +199,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 15, bottom: 5),
+              padding: const EdgeInsets.only(top: 20, bottom: 5, left: 6),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,7 +213,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
