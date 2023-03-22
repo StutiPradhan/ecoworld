@@ -2,6 +2,14 @@ import 'package:ecoworld/pages/ConfirmationPage.dart';
 import 'package:ecoworld/pages/InfoPage.dart';
 import 'package:ecoworld/pages/Sell_Scrap.dart';
 import 'package:ecoworld/pages/editMeet.dart';
+
+import 'package:ecoworld/pages/Editprofile.dart';
+import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/pages/home.dart';
+import 'package:ecoworld/pages/InfoPage.dart';
+import 'package:ecoworld/pages/Sell_Scrap.dart';
+import 'package:ecoworld/pages/editprofile.dart';
+
 import 'package:ecoworld/pages/login.dart';
 
 import 'package:ecoworld/signup.dart';
@@ -19,6 +27,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  get homeRoute => 'homepage';
+
+  get communityRoute => 'communitypage';
+
+  get ProfileRoute => 'profilepage';
 
   // This widget is the root of your application.
   @override
@@ -42,11 +56,7 @@ class MyApp extends StatelessWidget {
 
       home: const ProfilePage(),
 
-      //home: const SignUp(),
-
-      //home: const LoginPage(),
-
-      //home: const signup(),
+      //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
     );
   }
 }
