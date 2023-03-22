@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 
-class EditProfile extends StatefulWidget {
-  const EditProfile({super.key});
+class EditMeet extends StatefulWidget {
+  const EditMeet({super.key});
 
   @override
-  State<EditProfile> createState() => _EditProfileState();
+  State<EditMeet> createState() => _EditMeetState();
 }
 
-class _EditProfileState extends State<EditProfile> {
+class _EditMeetState extends State<EditMeet> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
