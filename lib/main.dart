@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
 
           ),
 
-      home: const ProfilePage(),
+      home: const EditMeet(),
 
       //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
     );

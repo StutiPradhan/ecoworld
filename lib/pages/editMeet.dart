@@ -58,9 +58,12 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          "Type of scrap",
-                          style: TextStyle(fontWeight: FontWeight.w800),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text(
+                            "Type of scrap",
+                            style: TextStyle(fontWeight: FontWeight.w800),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -97,8 +100,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Amount in kg",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Amount in kg",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -142,8 +148,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Type of scrap",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Type of scrap",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -179,8 +188,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Amount in kg",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Amount in kg",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -224,8 +236,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Type of scrap",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Type of scrap",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -261,8 +276,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Amount in kg",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Amount in kg",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -311,8 +329,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Time",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Time",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
@@ -348,8 +369,11 @@ class _EditMeetState extends State<EditMeet> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Date",
-                            style: TextStyle(fontWeight: FontWeight.w800)),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8.0),
+                          child: Text("Date",
+                              style: TextStyle(fontWeight: FontWeight.w800)),
+                        ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Container(
