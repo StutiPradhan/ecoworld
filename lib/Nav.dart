@@ -18,7 +18,16 @@ class NavPage extends StatefulWidget {
 class _NavPageState extends State<NavPage> {
   int index = 0;
 
-  List _index = [MyHomePage(), CommunityPage(), ProfilePage()];
+  List _index = [
+    MyHomePage(),
+    CommunityPage(),
+    ProfilePage(
+      // Address: '',
+      // City: '',
+      // Name: '',
+      // Number: '',
+    )
+  ];
 
   void updatePage(int _index) {
     setState(() {
