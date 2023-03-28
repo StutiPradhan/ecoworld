@@ -11,11 +11,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-//import 'package:flutter/src/widgets/framework.dart';
-//import 'package:flutter/src/widgets/placeholder.dart';
-
-// import 'package:flutter/src/widgets/framework.dart';
-// import 'package:flutter/src/widgets/placeholder.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -320,11 +315,7 @@ class _signupState extends State<SignUp> {
                                   'Login',
                                   style: TextStyle(color: Colors.blue),
                                 ))
-                            // TextButton(
-
-                            //   "SignUp",
-                            //   style: TextStyle(color: Colors.blue),
-                            // ),
+                          
                           ],
                         )
                       ],
