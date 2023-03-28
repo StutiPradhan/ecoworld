@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/login.dart';
@@ -25,11 +28,19 @@ class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
   late final TextEditingController _email;
   late final TextEditingController _password;
+  late final TextEditingController _address;
+  late final TextEditingController _city;
+  late final TextEditingController _name;
+  late final TextEditingController _phNum;
 
   @override
   void initState() {
     _email = TextEditingController();
     _password = TextEditingController();
+    _address = TextEditingController();
+    _city = TextEditingController();
+    _name = TextEditingController();
+    _phNum = TextEditingController();
     _passwordVisible = true;
     super.initState();
   }
@@ -38,8 +49,14 @@ class _signupState extends State<SignUp> {
   void dispose() {
     _email.dispose();
     _password.dispose();
+    _address.dispose();
+    _city.dispose();
+    _name.dispose();
+    _phNum.dispose();
     super.dispose();
   }
+  
+  FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +94,11 @@ class _signupState extends State<SignUp> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: const Padding(
+                    child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+                        controller: _name,
                         decoration: InputDecoration(
                           hintText: 'Name',
                           border: InputBorder.none,
@@ -101,10 +119,11 @@ class _signupState extends State<SignUp> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: const Padding(
+                    child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+                        controller: _phNum,
                         decoration: InputDecoration(
                           hintText: 'Phone Number',
                           border: InputBorder.none,
@@ -190,10 +209,11 @@ class _signupState extends State<SignUp> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: const Padding(
+                    child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+                        controller: _address,
                         decoration: InputDecoration(
                           hintText: 'Address',
                           border: InputBorder.none,
@@ -212,7 +232,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
-                          onPressed: () async {
+                          onPressed: () async{
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
                             );
@@ -247,6 +267,18 @@ class _signupState extends State<SignUp> {
                                 e.toString(),
                               );
                             }
+                            FirebaseFirestore.instance.collection('users').add({
+                              'address': '_address.text',
+                              'city': '_city.text',
+                              'name': '_name.text',
+                              'phNum': '_phNum.text'
+                            });
+                            // CollectionReference users =
+                            //     firestore.collection('users');
+
+                            // Future<Void> addUserData(
+                            //   String name, int phNo, String address, String city
+                            // ) {return users.doc()}
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Ecocolors.selectionBlack),
@@ -268,7 +300,7 @@ class _signupState extends State<SignUp> {
                         const SizedBox(
                           height: 25,
                         ),
-                                  Row(
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Already have an account?"),
