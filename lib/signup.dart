@@ -1,8 +1,9 @@
+import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecoworld/constants/colors.dart';
-import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/model/signup_model.dart';
 import 'package:ecoworld/pages/login.dart';
 import 'package:ecoworld/utilities/error_dialog_box.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,7 +11,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -55,8 +55,16 @@ class _signupState extends State<SignUp> {
     _phNum.dispose();
     super.dispose();
   }
-  
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+  Future createUser(UserSignup user) async {
+    final docUser = FirebaseFirestore.instance.collection('users').doc();
+
+    user.id = docUser.id;
+    final json = user.toJson();
+    await docUser.set(json);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +240,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
-                          onPressed: () async{
+                          onPressed: () async {
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
                             );
@@ -267,18 +275,13 @@ class _signupState extends State<SignUp> {
                                 e.toString(),
                               );
                             }
-                            FirebaseFirestore.instance.collection('users').add({
-                              'address': '_address.text',
-                              'city': '_city.text',
-                              'name': '_name.text',
-                              'phNum': '_phNum.text'
-                            });
-                            // CollectionReference users =
-                            //     firestore.collection('users');
-
-                            // Future<Void> addUserData(
-                            //   String name, int phNo, String address, String city
-                            // ) {return users.doc()}
+                            final user = UserSignup(
+                              address: _address.text,
+                              city: _city.text,
+                              name: _name.text,
+                              phNum: int.parse(_phNum.text),
+                            );
+                            createUser(user);
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Ecocolors.selectionBlack),
