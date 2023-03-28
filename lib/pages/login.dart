@@ -1,14 +1,10 @@
-//import 'package:ecoworld/constants/colors.dart';
+import "package:ecoworld/Nav.dart";
 import "package:ecoworld/constants/colors.dart";
 import "package:ecoworld/pages/community.dart";
+import "package:ecoworld/signup.dart";
 import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
-
 import "../utilities/error_dialog_box.dart";
-//import 'package:ecoworld/pages/home.dart';
-
-//import "../main.dart";
-// import './home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -126,70 +122,104 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
-                          child: ElevatedButton(
-                              onPressed: () async {
-                                final email = _email.text;
-                                final password = _password.text;
-                                try {
-                                  final userCredential = await FirebaseAuth
-                                      .instance
-                                      .signInWithEmailAndPassword(
-                                          email: email, password: password);
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => CommunityPage(),
-                                    ),
-                                  );
-                                } on FirebaseAuthException catch (e) {
-                                  if (e.code == 'user-not-found') {
-                                    await showErrorDialogue(
+                          child: Container(
+                            height: 60,
+                            width: 300,
+                            decoration: BoxDecoration(),
+                            child: ElevatedButton(
+                                onPressed: () async {
+                                  final email = _email.text;
+                                  final password = _password.text;
+                                  try {
+                                    final userCredential = await FirebaseAuth
+                                        .instance
+                                        .signInWithEmailAndPassword(
+                                            email: email, password: password);
+                                    Navigator.push(
                                       context,
-                                      'User not found',
+                                      MaterialPageRoute(
+                                        builder: (context) => CommunityPage(),
+                                      ),
                                     );
-                                  } else if (e.code == 'wrong-password') {
+                                  } on FirebaseAuthException catch (e) {
+                                    if (e.code == 'user-not-found') {
+                                      await showErrorDialogue(
+                                        context,
+                                        'User not found',
+                                      );
+                                    } else if (e.code == 'wrong-password') {
+                                      await showErrorDialogue(
+                                        context,
+                                        'Wrong credentials',
+                                      );
+                                    } else {
+                                      await showErrorDialogue(
+                                        context,
+                                        'Error: ${e.code}',
+                                      );
+                                    }
+                                  } catch (e) {
                                     await showErrorDialogue(
                                       context,
-                                      'Wrong credentials',
-                                    );
-                                  } else {
-                                    await showErrorDialogue(
-                                      context,
-                                      'Error: ${e.code}',
+                                      e.toString(),
                                     );
                                   }
-                                } catch (e) {
-                                  await showErrorDialogue(
-                                    context,
-                                    e.toString(),
-                                  );
-                                }
-                              },
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: Ecocolors.selectionBlack),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                    horizontal:
-                                        MediaQuery.of(context).size.width / 25,
-                                    vertical:
-                                        MediaQuery.of(context).size.height /
-                                            53),
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Text('Log In'),
-                                      Icon(Icons.arrow_forward)
-                                    ]),
-                              )),
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: Ecocolors.selectionBlack),
+                                child: Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal:
+                                          MediaQuery.of(context).size.width /
+                                              25,
+                                      vertical:
+                                          MediaQuery.of(context).size.height /
+                                              53),
+                                  child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        TextButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        NavPage()));
+                                          },
+                                          child: Text(
+                                            'Log-in',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                        ),
+                                        Icon(Icons.arrow_forward)
+                                      ]),
+                                )),
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             Text("Don't have an user account?"),
-                            Text(
-                              "SignUp",
-                              style: TextStyle(color: Colors.blue),
-                            ),
+                            TextButton(
+                                onPressed: () {
+                                  setState(() {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => SignUp()));
+                                  });
+                                },
+                                child: Text(
+                                  'SignUp',
+                                  style: TextStyle(color: Colors.blue),
+                                ))
+                            // TextButton(
+
+                            //   "SignUp",
+                            //   style: TextStyle(color: Colors.blue),
+                            // ),
                           ],
                         )
                       ]),

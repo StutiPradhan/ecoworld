@@ -55,7 +55,7 @@ class _signupState extends State<SignUp> {
     _phNum.dispose();
     super.dispose();
   }
-
+  
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
@@ -232,7 +232,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
-                          onPressed: () async {
+                          onPressed: () async{
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
                             );
@@ -267,7 +267,12 @@ class _signupState extends State<SignUp> {
                                 e.toString(),
                               );
                             }
-                            // FirebaseFirestore.instance.collection('user').add({'address' : });
+                            FirebaseFirestore.instance.collection('users').add({
+                              'address': '_address.text',
+                              'city': '_city.text',
+                              'name': '_name.text',
+                              'phNum': '_phNum.text'
+                            });
                             // CollectionReference users =
                             //     firestore.collection('users');
 
@@ -295,22 +300,30 @@ class _signupState extends State<SignUp> {
                         const SizedBox(
                           height: 25,
                         ),
-                        Center(
-                          child: RichText(
-                            text: new TextSpan(
-                              children: [
-                                new TextSpan(
-                                    text: 'Already have an account?',
-                                    style: TextStyle(
-                                        color: Ecocolors.selectionGrey2)),
-                                new TextSpan(
-                                    text: 'Login',
-                                    style: TextStyle(
-                                        color: Ecocolors.selectionBlue))
-                              ],
-                            ),
-                          ),
-                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Already have an account?"),
+                            TextButton(
+                                onPressed: () {
+                                  setState(() {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => LoginPage()));
+                                  });
+                                },
+                                child: Text(
+                                  'Login',
+                                  style: TextStyle(color: Colors.blue),
+                                ))
+                            // TextButton(
+
+                            //   "SignUp",
+                            //   style: TextStyle(color: Colors.blue),
+                            // ),
+                          ],
+                        )
                       ],
                     ),
                   )
