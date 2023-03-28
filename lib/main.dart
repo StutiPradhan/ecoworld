@@ -1,16 +1,11 @@
 import 'package:ecoworld/pages/ConfirmationPage.dart';
 import 'package:ecoworld/pages/InfoPage.dart';
 import 'package:ecoworld/pages/Sell_Scrap.dart';
+import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/editMeet.dart';
 
-import 'package:ecoworld/pages/Editprofile.dart';
-import 'package:ecoworld/pages/community.dart';
-import 'package:ecoworld/pages/home.dart';
-import 'package:ecoworld/pages/InfoPage.dart';
-import 'package:ecoworld/pages/Sell_Scrap.dart';
-import 'package:ecoworld/pages/editprofile.dart';
-
 import 'package:ecoworld/pages/login.dart';
+import 'package:ecoworld/pages/EditProfile.dart';
 
 import 'package:ecoworld/signup.dart';
 
@@ -54,7 +49,7 @@ class MyApp extends StatelessWidget {
 
           ),
 
-      home: const EditMeet(),
+      home: CommunityPage(),
 
       //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
     );
