@@ -139,6 +139,7 @@ class MyHomePage extends StatelessWidget {
                         'Wait !!',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+
                       SizedBox(
                         height: 6,
                       ),
@@ -159,6 +160,109 @@ class MyHomePage extends StatelessWidget {
                             bottomRight: Radius.circular(12))),
                    
                     child: Icon(Icons.arrow_forward_ios,size: 16,))
+
+                      Text(
+                        'Ghatikia',
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
+                      )
+                    ],
+                  ),
+                ),
+                Icon(
+                  Icons.phone,
+                  color: Colors.blue,
+                  size: 24,
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Container(
+            height: 72,
+            width: 350,
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade600),
+                borderRadius: BorderRadius.circular(12)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  Icons.account_box_rounded,
+                  color: Ecocolors.selectionGreen,
+                  size: 36,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 60.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Priyatosh Dash',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Text(
+                        'Khandagiri',
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
+                      )
+                    ],
+                  ),
+                ),
+                Icon(
+                  Icons.phone,
+                  color: Colors.blue,
+                  size: 24,
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
+          Container(
+            height: 72,
+            width: 350,
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.shade600),
+                borderRadius: BorderRadius.circular(12)),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  Icons.account_box_rounded,
+                  color: Ecocolors.selectionGreen,
+                  size: 36,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 70.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Stuti Pradhan',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      Text(
+                        'Patia',
+                        style: TextStyle(
+                            fontSize: 12, color: Colors.grey.shade600),
+                      )
+                    ],
+                  ),
+                ),
+                Icon(
+                  Icons.phone,
+                  color: Colors.blue,
+                  size: 24,
+                )
+
               ],
             ),
           ),

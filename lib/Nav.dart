@@ -1,10 +1,12 @@
+import 'package:ecoworld/pages/profile.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/main.dart';
 import 'package:ecoworld/pages/profile.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class NavPage extends StatefulWidget {
   const NavPage({super.key});

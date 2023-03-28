@@ -26,18 +26,7 @@ class _CommunityPageState extends State<CommunityPage> {
               top: true,
               right: true,
               bottom: true,
-              // child: Column(children: [
-              //   Padding(
-              //     padding: const EdgeInsets.all(15),
-              //     child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: const [
-              //           Icon(Icons.arrow_back),
-              //           Text("Community",
-              //               style: TextStyle(
-              //                   fontSize: 30, fontWeight: FontWeight.bold))
-              //         ]),
-              //   ),
+              
               child: Column(children: [
                 Row(
                     mainAxisAlignment: MainAxisAlignment.start,
