@@ -6,26 +6,19 @@ import 'package:flutter/cupertino.dart';
 import 'login.dart';
 
 class ProfilePage extends StatefulWidget {
-  // String Name;
-  // int Number;
-  // String Address;
-  // String City;
-
- const ProfilePage( 
-      {super.key,
-      // required this.Name,
-      // required this.Number,
-      // required this.Address,
-      // required this.City
-      });
-
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
   @override
   Widget build(BuildContext context) {
+    //String nameTextEditingController = '';
+
+    final _Namecontroller = TextEditingController();
+    final _Numbercontroller = TextEditingController();
+    String UserName = 'Surya Pratap Singh';
     return SingleChildScrollView(
       child: Material(
         child: Padding(
@@ -66,10 +59,27 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text("Stuti Pradhan",
+                        children: [
+                          // TextField(
+                          //   controller: _Namecontroller,
+                            
+                          //   decoration: InputDecoration(
+                          //   //  hintText: 'Enter your Name',
+                          //   labelText: Name,
+                          //     border: InputBorder.none,
+                          //     hintStyle:
+                          //         TextStyle(color: Colors.amber),
+                          //   ),
+                          // ),
+                          
+
+
+                          Text(UserName,
+                          
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20)),
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 126, 124, 124))),
                           Text("8394229530",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -157,9 +167,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                 onPressed: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => EditProfilePage(
-                                           
-                                            ))),
+                                        builder: (context) =>
+                                            EditProfilePage())),
                                 style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(12)),

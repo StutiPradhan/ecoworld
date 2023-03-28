@@ -58,13 +58,14 @@ class MyApp extends StatelessWidget {
           //   ProfileRoute : (context) => ProfilePage()
           // },
 
-      // home: NavPage(),
+       //home: NavPage(),
 
       //home: const SignUp(),
 
     
-home: MyHomePage(),
-      //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
+//home: MyHomePage(),
+      //home: ProfilePage(),
+     home: LoginPage(),
     );
   }
 }
