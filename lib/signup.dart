@@ -26,6 +26,9 @@ class SignUp extends StatefulWidget {
 
 class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
+
+    TextEditingController _NameEditingcontroller = TextEditingController();
+
   late final TextEditingController _email;
   late final TextEditingController _password;
   late final TextEditingController _address;
@@ -98,7 +101,11 @@ class _signupState extends State<SignUp> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+
+                        controller: _NameEditingcontroller,
+
                         controller: _name,
+
                         decoration: InputDecoration(
                           hintText: 'Name',
                           border: InputBorder.none,
@@ -201,7 +208,7 @@ class _signupState extends State<SignUp> {
                     height: 16,
                   ),
                   Container(
-                    height: 100,
+                    height: 48,
                     decoration: BoxDecoration(
                         //color: Ecocolors.selectionBlack,
                         shape: BoxShape.rectangle,
@@ -216,6 +223,31 @@ class _signupState extends State<SignUp> {
                         controller: _address,
                         decoration: InputDecoration(
                           hintText: 'Address',
+                          border: InputBorder.none,
+                          hintStyle: TextStyle(color: Ecocolors.selectionGrey1),
+                        ),
+                      ),
+                    ),
+                  ),
+                  
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Container(
+                    height: 48,
+                    decoration: BoxDecoration(
+                        //color: Ecocolors.selectionBlack,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(
+                          color: Ecocolors.selectionBlack,
+                        )),
+                    child: const Padding(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 24, vertical: 4),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'City',
                           border: InputBorder.none,
                           hintStyle: TextStyle(color: Ecocolors.selectionGrey1),
                         ),

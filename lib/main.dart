@@ -68,6 +68,31 @@ class MyApp extends StatelessWidget {
 
       home: CommunityPage(),
 
+
+          // initialRoute:  LoginPage(),
+
+          // routes: {
+          //   homeRoute : (context) => MyHomePage(),
+          //   communityRoute : (context) => CommunityPage(),
+          //   ProfileRoute : (context) => ProfilePage()
+          // },
+
+       //home: NavPage(),
+
+      //home: const SignUp(),
+
+      home: const EditProfile(),
+
+      //home: const SignUp(),
+
+      //home: const LoginPage(),
+
+
+    
+//home: MyHomePage(),
+      //home: ProfilePage(),
+     home: LoginPage(),
+
       //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
 
     );

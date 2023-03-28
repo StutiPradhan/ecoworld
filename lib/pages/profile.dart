@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 import 'login.dart';
 
 class ProfilePage extends StatefulWidget {
+
+
   // String Name;
   // int Number;
   // String Address;
@@ -19,14 +21,99 @@ class ProfilePage extends StatefulWidget {
     // required this.City
   });
 
+
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  _ProfilePageState createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
   @override
   Widget build(BuildContext context) {
+    //String nameTextEditingController = '';
+
+    final _Namecontroller = TextEditingController();
+    final _Numbercontroller = TextEditingController();
+    String UserName = 'Surya Pratap Singh';
     return SingleChildScrollView(
+
+      child: Material(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width / 25,
+            vertical: MediaQuery.of(context).size.height / 20,
+          ),
+          child: Column(children: [
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                //  crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(top: 20.0),
+                    child: Text("My Profile",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold)),
+                  ),
+                ]),
+            Padding(
+              padding: const EdgeInsets.only(top: 24, left: 6),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 120,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(width: 2),
+                        color: Colors.black),
+                    child: Image.asset("assets/images/ProfileImage.png"),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // TextField(
+                          //   controller: _Namecontroller,
+                            
+                          //   decoration: InputDecoration(
+                          //   //  hintText: 'Enter your Name',
+                          //   labelText: Name,
+                          //     border: InputBorder.none,
+                          //     hintStyle:
+                          //         TextStyle(color: Colors.amber),
+                          //   ),
+                          // ),
+                          
+
+
+                          Text(UserName,
+                          
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 126, 124, 124))),
+                          Text("8394229530",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 126, 124, 124))),
+                          Text("xyz road,abc colony,Bhubaneswar",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 126, 124, 124))),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+
       child: SafeArea(
         left: true,
         top: true,
@@ -37,6 +124,7 @@ class _ProfilePageState extends State<ProfilePage> {
             padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width / 15,
               vertical: MediaQuery.of(context).size.height / 28,
+
             ),
             child: Column(
               children: [
@@ -163,6 +251,33 @@ class _ProfilePageState extends State<ProfilePage> {
                                         onPressed: () =>
                                             Navigator.pop(context)),
                                   ),
+
+                                  onPressed: () => Navigator.pop(context)),
+                            ]),
+                          ),
+                        )
+                      ]),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 4,
+                          ),
+                          child: Expanded(
+                            child: Column(children: [
+                              ElevatedButton(
+                                onPressed: () => Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            EditProfilePage())),
+                                style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12)),
+                                  backgroundColor: Colors.black,
+
                                 ]),
                               ),
                             )
@@ -189,6 +304,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             borderRadius:
                                                 BorderRadius.circular(12)),
                                         backgroundColor: Colors.black,
+
 
                                         //side: const BorderSide(
                                         //  width: 2.0, color: Colors.black),

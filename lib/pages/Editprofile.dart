@@ -1,3 +1,4 @@
+import 'package:ecoworld/Nav.dart';
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/pages/profile.dart';
 import 'package:flutter/material.dart';
@@ -13,11 +14,18 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
-  // TextEditingController displayNameController =>   TextEditingController();
 
-  // get numberController => null;
+  void Update(){
 
-  // get displayNameController => null;
+  } 
+  final  _NumberEditingcontroller = TextEditingController();
+
+  // String Name = '';
+  
+  // set UserName(String UserName) {
+  //   UserName =${ _NameEditingcontroller.text};
+  // }
+  //get _temp => null;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +43,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ProfilePage(),
+                          builder: (context) => ProfilePage(),
                         ));
                   },
                 ),
@@ -150,9 +158,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     border: Border.all(
                       color: Ecocolors.selectionBlack,
                     )),
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                   child: TextField(
+                   //  controller: _NameEditingcontroller,
                     decoration: InputDecoration(
                       hintText: 'Enter your Name',
                       border: InputBorder.none,
@@ -186,9 +195,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     border: Border.all(
                       color: Ecocolors.selectionBlack,
                     )),
-                child: const Padding(
+                child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                   child: TextField(
+                    // controller: _Numbercontroller,
                     decoration: InputDecoration(
                       hintText: 'Enter Phone Number',
                       border: InputBorder.none,
@@ -285,13 +295,17 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     ),
                     child: Expanded(
                       child: Column(children: [
-
-        
                         ElevatedButton(
-                          onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>  const ProfilePage())),
+                          onPressed: () {
+                            setState(() {
+                             // UserName = _NameEditingcontroller.text;
+
+                              // Name = _Namecontroller.text;
+                              // Number = _Numbercontroller.text;
+                            });
+                            Navigator.pop(context);
+                            // Navigator.push(context, MaterialPageRoute(builder: (context) => NavPage()));
+                          },
                           style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8)),
