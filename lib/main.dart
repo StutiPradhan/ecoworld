@@ -1,44 +1,57 @@
 
-import 'package:ecoworld/pages/Editprofile.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
+
+import 'package:ecoworld/pages/ConfirmationPage.dart';
 import 'package:ecoworld/pages/InfoPage.dart';
 import 'package:ecoworld/pages/Sell_Scrap.dart';
-import 'package:ecoworld/pages/editprofile.dart';
+import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/pages/editMeet.dart';
 
 import 'package:ecoworld/pages/login.dart';
+import 'package:ecoworld/pages/EditProfile.dart';
 
 import 'package:ecoworld/signup.dart';
 
+
 import 'package:ecoworld/pages/profile.dart';
+import 'package:ecoworld/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 
 import 'Nav.dart';
+import 'firebase_options.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized;
+void main() async {
+  //await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  
-  get homeRoute => 'homepage';
-  
-  get communityRoute => 'communitypage';
-  
-  get ProfileRoute => 'profilepage';
-  
- 
+
+  // get homeRoute => 'homepage';
+
+  // get communityRoute => 'communitypage';
+
+  // get ProfileRoute => 'profilepage';
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EcoWorld',
+
+      theme: ThemeData(),
+
+      home: const SignUp(),
+
       theme: ThemeData(
           // This is the theme of your application.
           //
@@ -52,6 +65,8 @@ class MyApp extends StatelessWidget {
           // primarySwatch: Colors.blue,
 
           ),
+
+      home: CommunityPage(),
 
 
           // initialRoute:  LoginPage(),
@@ -77,6 +92,9 @@ class MyApp extends StatelessWidget {
 //home: MyHomePage(),
       //home: ProfilePage(),
      home: LoginPage(),
+
+      //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
+
     );
   }
 }
