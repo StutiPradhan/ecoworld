@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
 
       //home: const SignUp(),
 
-      home: const EditProfile(),
+     // home:  EditProfile(),
 
       //home: const SignUp(),
 
