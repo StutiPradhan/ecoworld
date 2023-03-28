@@ -18,7 +18,7 @@ class _CommunityPageState extends State<CommunityPage> {
         body: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.of(context).size.width / 15,
-              vertical: MediaQuery.of(context).size.height / 18,
+              vertical: MediaQuery.of(context).size.height / 28,
             ),
             child: SingleChildScrollView(
                 child: SafeArea(
@@ -26,7 +26,6 @@ class _CommunityPageState extends State<CommunityPage> {
               top: true,
               right: true,
               bottom: true,
-              
               child: Column(children: [
                 Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -37,10 +36,10 @@ class _CommunityPageState extends State<CommunityPage> {
                         onPressed: () {
                           setState(() {});
                         },
-                        iconSize: 40,
+                        iconSize: 30,
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(left: 70.0),
+                        padding: EdgeInsets.only(left: 85.0),
                         child: Text("Community",
                             textAlign: TextAlign.center,
                             style: TextStyle(
