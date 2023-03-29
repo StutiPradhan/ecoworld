@@ -27,7 +27,7 @@ class SignUp extends StatefulWidget {
 class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
 
-    TextEditingController _NameEditingcontroller = TextEditingController();
+  TextEditingController _NameEditingcontroller = TextEditingController();
 
   late final TextEditingController _email;
   late final TextEditingController _password;
@@ -58,7 +58,7 @@ class _signupState extends State<SignUp> {
     _phNum.dispose();
     super.dispose();
   }
-  
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   @override
@@ -101,10 +101,13 @@ class _signupState extends State<SignUp> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
-
                         controller: _NameEditingcontroller,
 
+
                        // controller: _name,
+
+                        // controller: _name,
+
 
                         decoration: InputDecoration(
                           hintText: 'Name',
@@ -229,7 +232,6 @@ class _signupState extends State<SignUp> {
                       ),
                     ),
                   ),
-                  
                   const SizedBox(
                     height: 16,
                   ),
@@ -264,7 +266,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
-                          onPressed: () async{
+                          onPressed: () async {
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
                             );
