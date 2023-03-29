@@ -128,6 +128,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         child: Row(children: [
                                       FittedBox(
                                         child: ElevatedButton(
+                                        
                                             style: ElevatedButton.styleFrom(
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
@@ -168,18 +169,25 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 ],
                                               ),
                                             ),
-                                            onPressed: () =>
-                                                Navigator.pop(context)),
+                                            
+                                            onPressed: () {
+                                             
+                                              Navigator.pop(context);
+                                              
+                                            }
+                                                ),
                                       ),
                                       SizedBox(
                                         width: 16,
                                       ),
                                       ElevatedButton(
-                                        onPressed: () => Navigator.push(
+                                        onPressed: () {
+                                          Navigator.push(
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    EditProfilePage())),
+                                                    EditProfilePage()));
+                                        } ,
                                         style: ElevatedButton.styleFrom(
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
@@ -455,5 +463,5 @@ class _ProfilePageState extends State<ProfilePage> {
     ])));
   }
 
-  EditProfilePage() {}
+
 }
