@@ -1,4 +1,3 @@
-
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
 
@@ -13,7 +12,6 @@ import 'package:ecoworld/pages/login.dart';
 
 import 'package:ecoworld/signup.dart';
 
-
 import 'package:ecoworld/pages/profile.dart';
 import 'package:ecoworld/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,8 +25,8 @@ void main() async {
   //await Firebase.initializeApp();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -53,6 +51,7 @@ class MyApp extends StatelessWidget {
       //home: const SignUp(),
 
       // theme: ThemeData(
+
       //     // This is the theme of your application.
       //     //
       //     // Try running your application with "flutter run". You'll see the
@@ -69,32 +68,56 @@ class MyApp extends StatelessWidget {
       //home: CommunityPage(),
 
 
-          // initialRoute:  LoginPage(),
+      // This is the theme of your application.
+      //
+      // Try running your application with "flutter run". You'll see the
+      // application has a blue toolbar. Then, without quitting the app, try
+      // changing the primarySwatch below to Colors.green and then invoke
+      // "hot reload" (press "r" in the console where you ran "flutter run",
+      // or simply save your changes to "hot reload" in a Flutter IDE).
+      // Notice that the counter didn't reset back to zero; the application
+      // is not restarted.
+      // primarySwatch: Colors.blue,
+    );
 
-          // routes: {
-          //   homeRoute : (context) => MyHomePage(),
-          //   communityRoute : (context) => CommunityPage(),
-          //   ProfileRoute : (context) => ProfilePage()
-          // },
+
+    //home: CommunityPage(),
+
+    // initialRoute:  LoginPage(),
+
 
       //  home: NavPage(),
 
-      //home: const SignUp(),
+    // routes: {
+    //   homeRoute : (context) => MyHomePage(),
+    //   communityRoute : (context) => CommunityPage(),
+    //   ProfileRoute : (context) => ProfilePage()
+    // },
+
+
+    //home: NavPage(),
+
 
      // home:  EditProfile(),
 
-      //home: const SignUp(),
-
-      //home: const LoginPage(),
+  //home: const SignUp(),
 
 
-    
+    //home: const EditProfile(),
+
+    //home: const SignUp(),
+
+    //home: const LoginPage(),
+
 //home: MyHomePage(),
-      //home: ProfilePage(),
-     home: LoginPage(),
+    //home: ProfilePage(),
+    //home: LoginPage(),
+
 
     //  home: ProfilePage(),
 
     );
+    //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
+
   }
 }
