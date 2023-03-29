@@ -8,7 +8,7 @@ import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/editMeet.dart';
 
 import 'package:ecoworld/pages/login.dart';
-import 'package:ecoworld/pages/EditProfile.dart';
+//import 'package:ecoworld/pages/EditProfile.dart';
 
 import 'package:ecoworld/signup.dart';
 
@@ -48,9 +48,26 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(),
 
-      home: const SignUp(),
+      //home: const SignUp(),
 
       // theme: ThemeData(
+
+      //     // This is the theme of your application.
+      //     //
+      //     // Try running your application with "flutter run". You'll see the
+      //     // application has a blue toolbar. Then, without quitting the app, try
+      //     // changing the primarySwatch below to Colors.green and then invoke
+      //     // "hot reload" (press "r" in the console where you ran "flutter run",
+      //     // or simply save your changes to "hot reload" in a Flutter IDE).
+      //     // Notice that the counter didn't reset back to zero; the application
+      //     // is not restarted.
+      //     // primarySwatch: Colors.blue,
+
+      //     ),
+
+      //home: CommunityPage(),
+
+
       // This is the theme of your application.
       //
       // Try running your application with "flutter run". You'll see the
@@ -63,9 +80,13 @@ class MyApp extends StatelessWidget {
       // primarySwatch: Colors.blue,
     );
 
+
     //home: CommunityPage(),
 
     // initialRoute:  LoginPage(),
+
+
+      //  home: NavPage(),
 
     // routes: {
     //   homeRoute : (context) => MyHomePage(),
@@ -73,9 +94,14 @@ class MyApp extends StatelessWidget {
     //   ProfileRoute : (context) => ProfilePage()
     // },
 
+
     //home: NavPage(),
 
-    //home: const SignUp(),
+
+     // home:  EditProfile(),
+
+  //home: const SignUp(),
+
 
     //home: const EditProfile(),
 
@@ -87,6 +113,11 @@ class MyApp extends StatelessWidget {
     //home: ProfilePage(),
     //home: LoginPage(),
 
+
+    //  home: ProfilePage(),
+
+    );
     //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
+
   }
 }

@@ -26,31 +26,24 @@ class _CommunityPageState extends State<CommunityPage> {
               top: true,
               right: true,
               bottom: true,
-              child: Column(children: [
+              child: Column(
+                children: [
                 Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    //  crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      IconButton(
-                        icon: const Icon(Icons.arrow_back),
-                        onPressed: () {
-                          setState(() {});
-                        },
-                        iconSize: 30,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.only(left: 85.0),
-                        child: Text("Community",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold)),
-                      ),
+                      Text("Community",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold)),
                     ]),
-                const SizedBox(
-                  height: 16,
+                SizedBox(
+                  height: 8,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
                   child: Container(
                     height: 200,
                     width: 430,
@@ -96,7 +89,9 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
                   child: Container(
                     height: 200,
                     width: 430,
@@ -142,7 +137,9 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
                   child: Container(
                     height: 200,
                     width: 430,
@@ -188,7 +185,9 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
                   child: Container(
                     height: 200,
                     width: 430,
@@ -234,7 +233,9 @@ class _CommunityPageState extends State<CommunityPage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
                   child: Container(
                     height: 200,
                     width: 430,

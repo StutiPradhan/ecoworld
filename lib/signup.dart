@@ -103,7 +103,11 @@ class _signupState extends State<SignUp> {
                       child: TextField(
                         controller: _NameEditingcontroller,
 
+
+                       // controller: _name,
+
                         // controller: _name,
+
 
                         decoration: InputDecoration(
                           hintText: 'Name',
