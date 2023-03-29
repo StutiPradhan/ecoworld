@@ -77,7 +77,7 @@ class MyApp extends StatelessWidget {
           //   ProfileRoute : (context) => ProfilePage()
           // },
 
-       home: NavPage(),
+      //  home: NavPage(),
 
       //home: const SignUp(),
 
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
     
 //home: MyHomePage(),
       //home: ProfilePage(),
-     //home: LoginPage(),
+     home: LoginPage(),
 
     //  home: ProfilePage(),
 
