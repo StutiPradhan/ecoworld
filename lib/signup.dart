@@ -22,7 +22,7 @@ class SignUp extends StatefulWidget {
 class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
 
-    TextEditingController _NameEditingcontroller = TextEditingController();
+    
 
   late final TextEditingController _email;
   late final TextEditingController _password;
@@ -105,10 +105,9 @@ class _signupState extends State<SignUp> {
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
 
-                        controller: _NameEditingcontroller,
-
                         controller: _name,
 
+                       
                         decoration: InputDecoration(
                           hintText: 'Name',
                           border: InputBorder.none,
@@ -245,10 +244,11 @@ class _signupState extends State<SignUp> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: const Padding(
+                    child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+                        controller: _city,
                         decoration: InputDecoration(
                           hintText: 'City',
                           border: InputBorder.none,
