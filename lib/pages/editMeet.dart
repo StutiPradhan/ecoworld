@@ -1,20 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/src/widgets/placeholder.dart';
-// import 'package:flutter/src/widgets/framework.dart';
-// import 'package:matcher/matcher.dart';
-// import 'package:flutter/src/rendering/box.dart';
-
 import '../constants/colors.dart';
 
-class SellingPage extends StatefulWidget {
-  const SellingPage({super.key});
+class EditMeet extends StatefulWidget {
+  const EditMeet({super.key});
 
   @override
-  State<SellingPage> createState() => _SellingPageState();
+  State<EditMeet> createState() => _EditMeetState();
 }
 
-class _SellingPageState extends State<SellingPage> {
+class _EditMeetState extends State<EditMeet> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -44,7 +39,7 @@ class _SellingPageState extends State<SellingPage> {
                     ),
                     const Padding(
                       padding: EdgeInsets.only(left: 80.0),
-                      child: Text("Sell Scrap",
+                      child: Text("Edit Meet",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.bold)),
@@ -53,7 +48,6 @@ class _SellingPageState extends State<SellingPage> {
                 ),
                 const Text(
                     "** Please specify your scrap type and amount in kg. And set the time and date, so that our scrap dealer can contact you at that time",
-                    textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Color.fromARGB(255, 25, 129, 215),
                         fontWeight: FontWeight.bold)),
@@ -416,26 +410,22 @@ class _SellingPageState extends State<SellingPage> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 24,
-                ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 7, vertical: 45),
-                      child: Expanded(
-                        child: Column(
-                          children: [
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 4,
+                        ),
+                        child: Expanded(
+                          child: Column(children: [
                             ElevatedButton(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.black,
-
-                                //side: const BorderSide(
-                                //  width: 2.0, color: Colors.black),
+                                backgroundColor: Colors.white,
+                                side: const BorderSide(
+                                    width: 2.0, color: Colors.black),
                               ),
                               child: Padding(
                                 padding: EdgeInsets.symmetric(
@@ -446,23 +436,67 @@ class _SellingPageState extends State<SellingPage> {
                                             50),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: const [
-                                    Text('Set Meeting',
+                                    Text('Cancel Meet',
                                         style: TextStyle(
-                                            color: Colors.white,
+                                            color: Colors.black,
                                             fontWeight: FontWeight.normal,
                                             fontSize: 20)),
                                     Icon(
-                                      CupertinoIcons.arrow_right,
-                                      color: Colors.white,
+                                      CupertinoIcons.bin_xmark_fill,
+                                      color: Colors.black,
                                     ),
                                   ],
                                 ),
                               ),
                             ),
-                          ],
+                          ]),
                         ),
+                      )
+                    ]),
+                const SizedBox(
+                  height: 24,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 7,
+                      ),
+                      child: Expanded(
+                        child: Column(children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black,
+                              //side: const BorderSide(
+                              //  width: 2.0, color: Colors.black),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal:
+                                      MediaQuery.of(context).size.width / 17,
+                                  vertical:
+                                      MediaQuery.of(context).size.height / 50),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: const [
+                                  Text('Save Profile',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 20)),
+                                  Icon(
+                                    Icons.arrow_forward,
+                                    color: Colors.white,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ]),
                       ),
                     ),
                   ],

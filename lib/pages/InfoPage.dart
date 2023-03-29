@@ -24,21 +24,18 @@ class _InformationPageState extends State<InformationPage> {
             bottom: true,
             child: Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: MediaQuery.of(context).size.width / 25,
-                vertical: MediaQuery.of(context).size.height / 30,
+                horizontal: MediaQuery.of(context).size.width / 15,
+                vertical: MediaQuery.of(context).size.height / 28,
               ),
               child: Column(children: [
                 Row(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: IconButton(
-                      icon: const Icon(Icons.arrow_back),
-                      onPressed: () {
-                        setState(() {});
-                      },
-                      iconSize: 40,
-                    ),
-                  )
+                  IconButton(
+                    icon: const Icon(Icons.arrow_back),
+                    onPressed: () {
+                      setState(() {});
+                    },
+                    iconSize: 30,
+                  ),
                 ]),
                 const SizedBox(
                   height: 16,
