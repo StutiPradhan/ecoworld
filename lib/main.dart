@@ -1,4 +1,3 @@
-
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
 
@@ -13,7 +12,6 @@ import 'package:ecoworld/pages/EditProfile.dart';
 
 import 'package:ecoworld/signup.dart';
 
-
 import 'package:ecoworld/pages/profile.dart';
 import 'package:ecoworld/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -27,8 +25,8 @@ void main() async {
   //await Firebase.initializeApp();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-  options: DefaultFirebaseOptions.currentPlatform,
-);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

@@ -54,6 +54,7 @@ class _signupState extends State<SignUp> {
     super.dispose();
   }
 
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
   Future createUser(UserSignup user) async {
@@ -231,7 +232,6 @@ class _signupState extends State<SignUp> {
                       ),
                     ),
                   ),
-                  
                   const SizedBox(
                     height: 16,
                   ),
@@ -267,6 +267,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
+                          onPressed: () async {
                           onPressed: () async {
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
