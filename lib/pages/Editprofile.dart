@@ -40,11 +40,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 IconButton(
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ProfilePage(),
-                        ));
+                    Navigator.pop(context);
                   },
                 ),
                 const SizedBox(
@@ -95,6 +91,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
+                onPressed: (){},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     side: const BorderSide(width: 2.0, color: Colors.black),
@@ -113,8 +110,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       ],
                     ),
                   ),
-                  onPressed: () => Navigator.pop(context)),
+              ),
               ElevatedButton(
+                onPressed: (){},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Ecocolors.selectionGreen,
                     side: const BorderSide(width: 2.0, color: Colors.black),
@@ -133,7 +131,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       ],
                     ),
                   ),
-                  onPressed: () => Navigator.pop(context)),
+              ),
             ],
           ),
           const SizedBox(height: 16),

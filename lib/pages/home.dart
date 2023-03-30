@@ -2,54 +2,62 @@ import 'package:ecoworld/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 65),
-              child: Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      'assets/images/Eco-world_logo.svg',
-                      height: 54,
-                      width: 159,
-                    )
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Container(
+        resizeToAvoidBottomInset: false,
+        body: SingleChildScrollView(
+            child: Column(children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 65),
+            child: Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.location_on_outlined,
-                        color: Colors.blue,
-                      ),
-                      TextButton(onPressed: () {}, child: Text('Bhubaneswar'))
-                    ],
+                  SvgPicture.asset(
+                    'assets/images/Eco-world_logo.svg',
+                    height: 54,
+                    width: 159,
                   )
                 ],
               ),
             ),
-            SizedBox(
-              height: 12,
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Container(
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.location_on_outlined,
+                      color: Colors.blue,
+                    ),
+                    TextButton(onPressed: () {}, child: Text('Bhubaneswar'))
+                  ],
+                )
+              ],
             ),
-            Container(
+          ),
+          // SizedBox(
+          //   height: 8,
+          // ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 110,
+                vertical: MediaQuery.of(context).size.height / 50),
+            child: Container(
               height: 180,
               width: 350,
               decoration: BoxDecoration(
@@ -111,17 +119,28 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(right: 220.0, top: 24),
-              child: Text(
-                'Scrap Dealers',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Scrap Dealers',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+              ],
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
+          ),
+          SizedBox(
+            height: 8,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 110,
+                vertical: MediaQuery.of(context).size.height / 80),
+            child: Container(
               height: 100,
               width: 350,
               decoration: BoxDecoration(
@@ -162,117 +181,25 @@ class MyHomePage extends StatelessWidget {
                         Icons.arrow_forward_ios,
                         size: 16,
                       )),
-                  Text(
-                    'Ghatikia',
-                    style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-                  )
                 ],
               ),
             ),
-            Icon(
-              Icons.phone,
-              color: Colors.blue,
-              size: 24,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 210.0, top: 8),
+            child: Text(
+              'Recycle Centers',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              height: 72,
-              width: 350,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey.shade600),
-                  borderRadius: BorderRadius.circular(12)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    Icons.account_box_rounded,
-                    color: Ecocolors.selectionGreen,
-                    size: 36,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 60.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Priyatosh Dash',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                        Text(
-                          'Khandagiri',
-                          style: TextStyle(
-                              fontSize: 12, color: Colors.grey.shade600),
-                        )
-                      ],
-                    ),
-                  ),
-                  Icon(
-                    Icons.phone,
-                    color: Colors.blue,
-                    size: 24,
-                  )
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 12,
-            ),
-            Container(
-              height: 72,
-              width: 350,
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey.shade600),
-                  borderRadius: BorderRadius.circular(12)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Icon(
-                    Icons.account_box_rounded,
-                    color: Ecocolors.selectionGreen,
-                    size: 36,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 70.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Stuti Pradhan',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        ),
-                        Text(
-                          'Patia',
-                          style: TextStyle(
-                              fontSize: 12, color: Colors.grey.shade600),
-                        )
-                      ],
-                    ),
-                  ),
-                  Icon(
-                    Icons.phone,
-                    color: Colors.blue,
-                    size: 24,
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 200.0, top: 24),
-              child: Text(
-                'Recycle Centers',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-              ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
+          ),
+          // SizedBox(
+          //   height: 8,
+          // ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width / 110,
+                vertical: MediaQuery.of(context).size.height / 50),
+            child: Container(
               child: Column(children: [
                 Container(
                     height: 180,
@@ -332,126 +259,134 @@ class MyHomePage extends StatelessWidget {
                 SizedBox(
                   height: 16,
                 ),
-                Container(
-                  height: 180,
-                  width: 350,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade300),
-                      borderRadius: BorderRadius.circular(12)),
-                  //color: Colors.amber,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
+                  child: Container(
+                    height: 180,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade300),
+                        borderRadius: BorderRadius.circular(12)),
+                    //color: Colors.amber,
 
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(12),
-                                topRight: Radius.circular(12)),
-                            color: Colors.grey.shade300),
-                      ),
-                      Container(
-                        height: 50,
-                        decoration: BoxDecoration(color: Colors.white),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 16.0, right: 16, top: 12),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'XYZ Recycle center',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    'abc street, def colony, bhubneswar',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey.shade600),
-                                  )
-                                ],
-                              ),
-                              Icon(
-                                Icons.phone,
-                                color: Colors.blue,
-                                size: 24,
-                              )
-                            ],
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(12),
+                                  topRight: Radius.circular(12)),
+                              color: Colors.grey.shade300),
+                        ),
+                        Container(
+                          height: 50,
+                          decoration: BoxDecoration(color: Colors.white),
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16.0, right: 16, top: 12),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'XYZ Recycle center',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      'abc street, def colony, bhubneswar',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey.shade600),
+                                    )
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.phone,
+                                  color: Colors.blue,
+                                  size: 24,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 12,
                 ),
-                Container(
-                  height: 180,
-                  width: 350,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.grey.shade200),
-                      borderRadius: BorderRadius.circular(12)),
-                  //color: Colors.amber,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
+                  child: Container(
+                    height: 180,
+                    width: 350,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey.shade200),
+                        borderRadius: BorderRadius.circular(12)),
+                    //color: Colors.amber,
 
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(12),
-                                topRight: Radius.circular(12)),
-                            color: Colors.grey.shade300),
-                      ),
-                      Container(
-                        height: 50,
-                        decoration: BoxDecoration(color: Colors.white),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              left: 16.0, right: 16, top: 12),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'XYZ Recycle center',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    'abc street, def colony, bhubneswar',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey.shade600),
-                                  )
-                                ],
-                              ),
-                              Icon(
-                                Icons.phone,
-                                color: Colors.blue,
-                                size: 24,
-                              )
-                            ],
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 120,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(12),
+                                  topRight: Radius.circular(12)),
+                              color: Colors.grey.shade300),
+                        ),
+                        Container(
+                          height: 50,
+                          decoration: BoxDecoration(color: Colors.white),
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                                left: 16.0, right: 16, top: 12),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'XYZ Recycle center',
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      'abc street, def colony, bhubneswar',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey.shade600),
+                                    )
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.phone,
+                                  color: Colors.blue,
+                                  size: 24,
+                                )
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 )
               ]),
             ),
-          ],
-        ),
-      ),
-    );
+          )
+        ])));
   }
 }
