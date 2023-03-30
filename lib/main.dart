@@ -1,24 +1,11 @@
 import 'package:ecoworld/pages/community.dart';
-import 'package:ecoworld/pages/home.dart';
-
-import 'package:ecoworld/pages/ConfirmationPage.dart';
-import 'package:ecoworld/pages/InfoPage.dart';
-import 'package:ecoworld/pages/Sell_Scrap.dart';
-import 'package:ecoworld/pages/community.dart';
-import 'package:ecoworld/pages/editMeet.dart';
-
 import 'package:ecoworld/pages/login.dart';
-//import 'package:ecoworld/pages/EditProfile.dart';
 
-import 'package:ecoworld/signup.dart';
-
-import 'package:ecoworld/pages/profile.dart';
 import 'package:ecoworld/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 
-import 'Nav.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -65,8 +52,7 @@ class MyApp extends StatelessWidget {
 
       //     ),
 
-      //home: CommunityPage(),
-
+      home: LoginPage(),
 
       // This is the theme of your application.
       //
@@ -79,45 +65,5 @@ class MyApp extends StatelessWidget {
       // is not restarted.
       // primarySwatch: Colors.blue,
     );
-
-
-    //home: CommunityPage(),
-
-    // initialRoute:  LoginPage(),
-
-
-      //  home: NavPage(),
-
-    // routes: {
-    //   homeRoute : (context) => MyHomePage(),
-    //   communityRoute : (context) => CommunityPage(),
-    //   ProfileRoute : (context) => ProfilePage()
-    // },
-
-
-    //home: NavPage(),
-
-
-     // home:  EditProfile(),
-
-  //home: const SignUp(),
-
-
-    //home: const EditProfile(),
-
-    //home: const SignUp(),
-
-    //home: const LoginPage(),
-
-//home: MyHomePage(),
-    //home: ProfilePage(),
-    //home: LoginPage(),
-
-
-    //  home: ProfilePage(),
-
-    );
-    //home: ProfilePage(Name: '', Number: int.parse('source'), Address: '', City: '',),
-
   }
 }
