@@ -1,24 +1,13 @@
-import 'package:ecoworld/pages/community.dart';
-import 'package:ecoworld/pages/home.dart';
-
-import 'package:ecoworld/pages/ConfirmationPage.dart';
-import 'package:ecoworld/pages/InfoPage.dart';
-import 'package:ecoworld/pages/Sell_Scrap.dart';
-import 'package:ecoworld/pages/community.dart';
-import 'package:ecoworld/pages/editMeet.dart';
-
-import 'package:ecoworld/pages/login.dart';
 import 'package:ecoworld/pages/EditProfile.dart';
-
-import 'package:ecoworld/signup.dart';
-
+import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/pages/login.dart';
 import 'package:ecoworld/pages/profile.dart';
+
 import 'package:ecoworld/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 
-import 'Nav.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -45,15 +34,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EcoWorld',
-
       theme: ThemeData(),
-
-      home: const SignUp(),
-
-      
-
-    
-
+      home: ProfilePage(),
     );
   }
 }

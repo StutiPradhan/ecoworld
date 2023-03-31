@@ -267,7 +267,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
-                          onPressed: () async {
+                          
                           onPressed: () async {
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,

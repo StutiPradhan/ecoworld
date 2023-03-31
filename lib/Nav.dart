@@ -48,17 +48,12 @@ class _NavPageState extends State<NavPage> {
         onTap: updatePage,
         items: [
           BottomNavigationBarItem(
-              // ignore: unrelated_type_equality_checks
+           
               icon: index == 0
                   ? SvgPicture.asset('assets/images/Home_color.svg')
                   : SvgPicture.asset('assets/images/Home.svg'),
               label: 'Home'),
-          // BottomNavigationBarItem(
-          //   icon: Icon(
-          //     Icons.home,
-          //   ),
-          //   label: 'Home',
-          // ),
+       
           BottomNavigationBarItem(
               icon: index == 1
                   ? SvgPicture.asset('assets/images/Community-color.svg')

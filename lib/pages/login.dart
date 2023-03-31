@@ -1,6 +1,7 @@
 import "package:ecoworld/Nav.dart";
 import "package:ecoworld/constants/colors.dart";
 import "package:ecoworld/pages/community.dart";
+import "package:ecoworld/pages/profile.dart";
 import "package:ecoworld/signup.dart";
 import "package:firebase_auth/firebase_auth.dart";
 import "package:flutter/material.dart";
@@ -138,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => CommunityPage(),
+                                        builder: (context) => NavPage(),
                                       ),
                                     );
                                   } on FirebaseAuthException catch (e) {

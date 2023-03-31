@@ -29,7 +29,7 @@ class UserSignup {
       phNum: json['phNum']);
 }
 
-Stream<List<UserSignup>> readUsers() => FirebaseFirestore.instance
-    .collection('users')
-    .snapshots()
-    .map((snapshot) => snapshot.docs.map((doc) => UserSignup.fromJson(doc.data()).toList()));
+// Stream<List<UserSignup>> readUsers() => FirebaseFirestore.instance
+//     .collection('users')
+//     .snapshots()
+//     .map((snapshot) => snapshot.docs.map((doc) => UserSignup.fromJson(doc.data()).toList()));
