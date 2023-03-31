@@ -1,4 +1,8 @@
+
 import 'package:ecoworld/pages/ConfirmationPage.dart';
+
+import 'package:ecoworld/pages/home.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/placeholder.dart';
@@ -39,8 +43,22 @@ class _SellingPageState extends State<SellingPage> {
                     IconButton(
                       icon: const Icon(Icons.arrow_back),
                       onPressed: () {
-                        setState(() {});
+                        setState(() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MyHomePage()));
+                        });
                       },
+                      //  TextButton(
+                      //           onPressed: () {
+                      //             setState(() {
+                      //               Navigator.push(
+                      //                   context,
+                      //                   MaterialPageRoute(
+                      //                       builder: (context) => LoginPage()));
+                      //             });
+                      //           },
                       iconSize: 30,
                     ),
                     const Padding(
