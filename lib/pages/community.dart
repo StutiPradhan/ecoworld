@@ -1,3 +1,4 @@
+import 'package:ecoworld/pages/InfoPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -52,8 +53,16 @@ class _CommunityPageState extends State<CommunityPage> {
                     // ),
                     child: Stack(
                       children: [
-                        Image.asset('assets/images/oldClothes.png',
-                            fit: BoxFit.fill),
+                        InkWell(
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const InformationPage(),
+                            ),
+                          ),
+                          child: Image.asset('assets/images/oldClothes.png',
+                              fit: BoxFit.fill),
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,4 +1,8 @@
+
+import 'package:ecoworld/pages/ConfirmationPage.dart';
+
 import 'package:ecoworld/pages/home.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/placeholder.dart';
@@ -445,7 +449,14 @@ class _SellingPageState extends State<SellingPage> {
                         child: Column(
                           children: [
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ConfirmationPage()),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.black,
 
