@@ -1,8 +1,9 @@
+import 'dart:convert';
 import 'dart:ffi';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecoworld/constants/colors.dart';
-import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/model/signup_model.dart';
 import 'package:ecoworld/pages/login.dart';
 import 'package:ecoworld/utilities/error_dialog_box.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,12 +11,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 import 'firebase_options.dart';
-
-//import 'package:flutter/src/widgets/framework.dart';
-//import 'package:flutter/src/widgets/placeholder.dart';
-
-// import 'package:flutter/src/widgets/framework.dart';
-// import 'package:flutter/src/widgets/placeholder.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -27,7 +22,7 @@ class SignUp extends StatefulWidget {
 class _signupState extends State<SignUp> {
   bool _passwordVisible = false;
 
-  TextEditingController _NameEditingcontroller = TextEditingController();
+    
 
   late final TextEditingController _email;
   late final TextEditingController _password;
@@ -59,7 +54,16 @@ class _signupState extends State<SignUp> {
     super.dispose();
   }
 
+
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+
+  Future createUser(UserSignup user) async {
+    final docUser = FirebaseFirestore.instance.collection('users').doc();
+
+    user.id = docUser.id;
+    final json = user.toJson();
+    await docUser.set(json);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -101,14 +105,10 @@ class _signupState extends State<SignUp> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
-                        controller: _NameEditingcontroller,
 
+                        controller: _name,
 
-                       // controller: _name,
-
-                        // controller: _name,
-
-
+                       
                         decoration: InputDecoration(
                           hintText: 'Name',
                           border: InputBorder.none,
@@ -244,10 +244,11 @@ class _signupState extends State<SignUp> {
                         border: Border.all(
                           color: Ecocolors.selectionBlack,
                         )),
-                    child: const Padding(
+                    child: Padding(
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 4),
                       child: TextField(
+                        controller: _city,
                         decoration: InputDecoration(
                           hintText: 'City',
                           border: InputBorder.none,
@@ -266,6 +267,7 @@ class _signupState extends State<SignUp> {
                     child: Column(
                       children: [
                         ElevatedButton(
+                          
                           onPressed: () async {
                             await Firebase.initializeApp(
                               options: DefaultFirebaseOptions.currentPlatform,
@@ -301,18 +303,13 @@ class _signupState extends State<SignUp> {
                                 e.toString(),
                               );
                             }
-                            FirebaseFirestore.instance.collection('users').add({
-                              'address': '_address.text',
-                              'city': '_city.text',
-                              'name': '_name.text',
-                              'phNum': '_phNum.text'
-                            });
-                            // CollectionReference users =
-                            //     firestore.collection('users');
-
-                            // Future<Void> addUserData(
-                            //   String name, int phNo, String address, String city
-                            // ) {return users.doc()}
+                            final user = UserSignup(
+                              address: _address.text,
+                              city: _city.text,
+                              name: _name.text,
+                              phNum: int.parse(_phNum.text),
+                            );
+                            createUser(user);
                           },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Ecocolors.selectionBlack),
@@ -351,11 +348,7 @@ class _signupState extends State<SignUp> {
                                   'Login',
                                   style: TextStyle(color: Colors.blue),
                                 ))
-                            // TextButton(
-
-                            //   "SignUp",
-                            //   style: TextStyle(color: Colors.blue),
-                            // ),
+                          
                           ],
                         )
                       ],

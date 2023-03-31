@@ -3,6 +3,7 @@ import 'package:ecoworld/pages/Sell_Scrap.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/home.dart';
 import 'package:ecoworld/pages/login.dart';
+import 'package:ecoworld/pages/profile.dart';
 
 import 'package:ecoworld/signup.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -35,7 +36,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EcoWorld',
-
       theme: ThemeData(),
 
       home: SellingPage(),
@@ -69,6 +69,8 @@ class MyApp extends StatelessWidget {
       // Notice that the counter didn't reset back to zero; the application
       // is not restarted.
       // primarySwatch: Colors.blue,
+
+      //home: ProfilePage(),
     );
   }
 }
