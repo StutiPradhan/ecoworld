@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
 
       //home: CommunityPage(),
 
-      home: const NavPage(),
+      home: const LoginPage(),
 
       // home: MyHomePage(),
 
