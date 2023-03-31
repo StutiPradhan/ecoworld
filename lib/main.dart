@@ -1,3 +1,4 @@
+import 'package:ecoworld/Nav.dart';
 import 'package:ecoworld/pages/EditProfile.dart';
 import 'package:ecoworld/pages/Sell_Scrap.dart';
 import 'package:ecoworld/pages/community.dart';
@@ -38,6 +39,9 @@ class MyApp extends StatelessWidget {
       title: 'EcoWorld',
       theme: ThemeData(),
 
+      home: const NavPage(),
+
+
       home: MyHomePage(),
 
       //home: const SignUp(),
@@ -71,6 +75,7 @@ class MyApp extends StatelessWidget {
       // primarySwatch: Colors.blue,
 
       //home: ProfilePage(),
-    );
+
+  );
   }
 }

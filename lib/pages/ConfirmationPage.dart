@@ -1,3 +1,4 @@
+import 'package:ecoworld/Nav.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +72,13 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
                       child: Expanded(
                         child: Column(children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const NavPage()),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
                             ),
