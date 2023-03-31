@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
       title: 'EcoWorld',
       theme: ThemeData(),
 
-      home: SellingPage(),
+      home: MyHomePage(),
 
       //home: const SignUp(),
 

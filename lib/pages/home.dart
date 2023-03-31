@@ -1,4 +1,5 @@
 import 'package:ecoworld/constants/colors.dart';
+import 'package:ecoworld/pages/Sell_Scrap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -170,17 +171,37 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Container(child: Image.asset('assets/images/Sell1.png')),
                   Container(
-                      height: 100,
-                      width: 30,
-                      decoration: BoxDecoration(
-                          color: Ecocolors.selectionGreen,
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(12),
-                              bottomRight: Radius.circular(12))),
+                    height: 100,
+                    width: 30,
+                    decoration: BoxDecoration(
+                        color: Ecocolors.selectionGreen,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(12),
+                            bottomRight: Radius.circular(12))),
+                    child: TextButton(
+                      onPressed: () {
+                        setState(() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SellingPage()));
+                        });
+                      },
                       child: Icon(
                         Icons.arrow_forward_ios,
                         size: 16,
-                      )),
+                      ),
+                      // TextButton(
+                      //           onPressed: () {
+                      //             setState(() {
+                      //               Navigator.push(
+                      //                   context,
+                      //                   MaterialPageRoute(
+                      //                       builder: (context) => LoginPage()));
+                      //             });
+                      //           },
+                    ),
+                  ),
                 ],
               ),
             ),
