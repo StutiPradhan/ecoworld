@@ -1,3 +1,4 @@
+import 'package:ecoworld/Nav.dart';
 import 'package:ecoworld/pages/EditProfile.dart';
 import 'package:ecoworld/pages/community.dart';
 import 'package:ecoworld/pages/login.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'EcoWorld',
       theme: ThemeData(),
-      home: ProfilePage(),
+      home: const NavPage(),
     );
   }
 }
