@@ -26,8 +26,7 @@ class _CommunityPageState extends State<CommunityPage> {
               top: true,
               right: true,
               bottom: true,
-              child: Column(
-                children: [
+              child: Column(children: [
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     //  crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,169 +46,30 @@ class _CommunityPageState extends State<CommunityPage> {
                   child: Container(
                     height: 200,
                     width: 430,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    // decoration: const BoxDecoration(
+                    //   color: Color.fromARGB(255, 211, 211, 211),
+                    //   borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // ),
+                    child: Stack(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 12.0),
-                              child: Text(
-                                "How to use your old clothes?",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 130),
-                              child: Icon(
-                                CupertinoIcons.arrow_down_circle,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12.0, bottom: 12),
-                          child: Text("11/03/2023",
-                              style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey)),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width / 110,
-                      vertical: MediaQuery.of(context).size.height / 50),
-                  child: Container(
-                    height: 200,
-                    width: 430,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
+                        Image.asset('assets/images/oldClothes.png',
+                            fit: BoxFit.fill),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 12.0),
-                              child: Text(
-                                "Join the clean Bhubaneshwar Movement",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 70),
-                              child: Icon(
-                                CupertinoIcons.arrow_down_circle,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12.0, bottom: 12),
-                          child: Text("11/03/2023",
-                              style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey)),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width / 110,
-                      vertical: MediaQuery.of(context).size.height / 50),
-                  child: Container(
-                    height: 200,
-                    width: 430,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 12.0),
-                              child: Text(
-                                "Some new methods of recycling",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(left: 120),
-                              child: Icon(
-                                CupertinoIcons.arrow_down_circle,
-                                color: Colors.green,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12.0, bottom: 12),
-                          child: Text("11/03/2023",
-                              style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey)),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: MediaQuery.of(context).size.width / 110,
-                      vertical: MediaQuery.of(context).size.height / 50),
-                  child: Container(
-                    height: 200,
-                    width: 430,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12.0),
-                          child: Row(
+                          children: [
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: const [
-                                Text(
-                                  "Feel free to join the campaign",
-                                  style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 12.0),
+                                  child: Text(
+                                    "How to use your old clothes?",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 130),
@@ -218,15 +78,17 @@ class _CommunityPageState extends State<CommunityPage> {
                                     color: Colors.green,
                                   ),
                                 ),
-                              ]),
-                        ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12.0, bottom: 12),
-                          child: Text("11/03/2023",
-                              style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey)),
+                              ],
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 12.0, bottom: 12),
+                              child: Text("11/03/2023",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey)),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -239,42 +101,219 @@ class _CommunityPageState extends State<CommunityPage> {
                   child: Container(
                     height: 200,
                     width: 430,
-                    decoration: const BoxDecoration(
-                      color: Color.fromARGB(255, 211, 211, 211),
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    // decoration: const BoxDecoration(
+                    //   color: Color.fromARGB(255, 211, 211, 211),
+                    //   borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // ),
+                    child: Stack(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 12.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                "New recycle center in the neighborhood",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 80),
-                                child: Icon(
-                                  CupertinoIcons.arrow_down_circle,
-                                  color: Colors.green,
-                                ),
-                              ),
-                            ],
-                          ),
+                        Image.asset(
+                          'assets/images/joinMovement.png',
+                          fit: BoxFit.fill,
                         ),
-                        const Padding(
-                          padding: EdgeInsets.only(left: 12.0, bottom: 12),
-                          child: Text("11/03/2023",
-                              style: TextStyle(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.grey)),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 12.0),
+                                  child: Text(
+                                    "Join the clean Bhubaneshwar Movement",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 70),
+                                  child: Icon(
+                                    CupertinoIcons.arrow_down_circle,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 12.0, bottom: 12),
+                              child: Text("11/03/2023",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey)),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
+                  child: Container(
+                    height: 200,
+                    width: 430,
+                    // decoration: const BoxDecoration(
+                    //   color: Color.fromARGB(255, 211, 211, 211),
+                    //   borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // ),
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          'assets/images/newWays.png',
+                          fit: BoxFit.fill,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.only(left: 12.0),
+                                  child: Text(
+                                    "Some new methods of recycling",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 120),
+                                  child: Icon(
+                                    CupertinoIcons.arrow_down_circle,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 12.0, bottom: 12),
+                              child: Text("11/03/2023",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey)),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
+                  child: Container(
+                    height: 200,
+                    width: 430,
+                    // decoration: const BoxDecoration(
+                    //   color: Color.fromARGB(255, 211, 211, 211),
+                    //   borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // ),
+                    child: Stack(
+                      children: [
+                        Image.asset('assets/images/jonUS.png',
+                            fit: BoxFit.fill),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12.0),
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      "Feel free to join the campaign",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 130),
+                                      child: Icon(
+                                        CupertinoIcons.arrow_down_circle,
+                                        color: Colors.green,
+                                      ),
+                                    ),
+                                  ]),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 12.0, bottom: 12),
+                              child: Text("11/03/2023",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey)),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width / 110,
+                      vertical: MediaQuery.of(context).size.height / 50),
+                  child: Container(
+                    height: 200,
+                    width: 430,
+                    // decoration: const BoxDecoration(
+                    //   color: Color.fromARGB(255, 211, 211, 211),
+                    //   borderRadius: BorderRadius.all(Radius.circular(5)),
+                    // ),
+                    child: Stack(
+                      children: [
+                        Image.asset(
+                          'assets/images/recycleCenter1.png',
+                          fit: BoxFit.fill,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 12.0),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text(
+                                    "New recycle center in the neighborhood",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      CupertinoIcons.arrow_down_circle,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(left: 12.0, bottom: 12),
+                              child: Text("11/03/2023",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.grey)),
+                            ),
+                          ],
                         ),
                       ],
                     ),
