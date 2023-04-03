@@ -1,4 +1,4 @@
-
+import 'package:ecoworld/Nav.dart';
 import 'package:ecoworld/pages/ConfirmationPage.dart';
 
 import 'package:ecoworld/pages/home.dart';
@@ -47,18 +47,9 @@ class _SellingPageState extends State<SellingPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MyHomePage()));
+                                  builder: (context) => NavPage()));
                         });
                       },
-                      //  TextButton(
-                      //           onPressed: () {
-                      //             setState(() {
-                      //               Navigator.push(
-                      //                   context,
-                      //                   MaterialPageRoute(
-                      //                       builder: (context) => LoginPage()));
-                      //             });
-                      //           },
                       iconSize: 30,
                     ),
                     const Padding(

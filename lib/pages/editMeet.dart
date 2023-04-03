@@ -1,3 +1,4 @@
+import 'package:ecoworld/pages/CancelMeet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
@@ -421,7 +422,14 @@ class _EditMeetState extends State<EditMeet> {
                         child: Expanded(
                           child: Column(children: [
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => CancelMeet()));
+                                });
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                                 side: const BorderSide(

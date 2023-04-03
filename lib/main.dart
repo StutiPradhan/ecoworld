@@ -1,7 +1,9 @@
 import 'package:ecoworld/Nav.dart';
+import 'package:ecoworld/pages/CancelMeet.dart';
 import 'package:ecoworld/pages/EditProfile.dart';
 import 'package:ecoworld/pages/Sell_Scrap.dart';
 import 'package:ecoworld/pages/community.dart';
+import 'package:ecoworld/pages/editMeet.dart';
 import 'package:ecoworld/pages/home.dart';
 import 'package:ecoworld/pages/login.dart';
 import 'package:ecoworld/pages/profile.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
 
       //home: CommunityPage(),
 
-      home: const LoginPage(),
+      home: const EditMeet(),
 
       // home: MyHomePage(),
 
