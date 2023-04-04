@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
 
       //home: CommunityPage(),
 
-      home: const EditMeet(),
+      home: const LoginPage(),
 
       // home: MyHomePage(),
 

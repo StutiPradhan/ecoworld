@@ -1,5 +1,6 @@
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/pages/InfoPage.dart';
+import 'package:ecoworld/pages/community.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
@@ -32,7 +33,12 @@ class _InformationPageState extends State<InformationPage> {
                   IconButton(
                     icon: const Icon(Icons.arrow_back),
                     onPressed: () {
-                      setState(() {});
+                      setState(() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CommunityPage()));
+                      });
                     },
                     iconSize: 30,
                   ),

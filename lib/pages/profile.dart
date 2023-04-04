@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecoworld/constants/colors.dart';
 import 'package:ecoworld/pages/Editprofile.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -26,9 +27,11 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  Stream<List<UserSignup>> readUsers() =>
-      FirebaseFirestore.instance.collection('users').snapshots()
-  .map((snapshot) => snapshot.docs.map((doc) => UserSignup.fromJson(doc.data())).toList());
+  Stream<List<UserSignup>> readUsers() => FirebaseFirestore.instance
+      .collection('users')
+      .snapshots()
+      .map((snapshot) =>
+          snapshot.docs.map((doc) => UserSignup.fromJson(doc.data())).toList());
 
   @override
   Widget build(BuildContext context) {
@@ -246,11 +249,13 @@ class _ProfilePageState extends State<ProfilePage> {
                                     style: TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
-                                Text("Edit meet",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.normal,
-                                        color: Colors.blue)),
+                                Text(
+                                  "Edit meet",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.normal,
+                                      color: Colors.blue),
+                                ),
                               ],
                             ),
                           ),
